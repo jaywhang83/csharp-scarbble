@@ -7,8 +7,9 @@ namespace ScrabbleScoreNS
 {
   public class ScrabbleScore
   {
-    public int Score(string word)
+    public int Score(string wordInputted)
     {
+      string word = wordInputted.ToUpper();
       char[] input = word.ToCharArray();
       string[] stringArray = Array.ConvertAll(input, element => element.ToString());
       int pointTotal = 0;
