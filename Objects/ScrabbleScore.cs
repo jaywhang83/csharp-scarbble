@@ -7,7 +7,16 @@ namespace ScrabbleScoreNS
 {
   public class ScrabbleScore
   {
-    public int Score(string wordInputted)
+    private string Word;
+    public ScrabbleScore(string word)
+    {
+      Word = word;
+    }
+    public string GetWord()
+    {
+      return Word;
+    }
+    public string Score(string wordInputted)
     {
       string word = wordInputted.ToUpper();
       char[] input = word.ToCharArray();
@@ -29,13 +38,13 @@ namespace ScrabbleScoreNS
           if(item.Value.Contains(stringArray[i]))
           {
             pointTotal += item.Key;
-            Console.WriteLine(item.Key);
 
           }
         }
       }
-        // Console.WriteLine(pointTotal);
-        return pointTotal;
+      Console.WriteLine(pointTotal);
+      return "Your score for " + wordInputted + " is " + pointTotal;
     }
+
   }
 }

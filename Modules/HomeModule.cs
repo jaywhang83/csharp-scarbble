@@ -12,7 +12,8 @@ namespace ScrabbleScoreNS
       Post["/result"] = _ =>
       {
         string word = Request.Form["new-word"];
-        ScrabbleScore play = new ScrabbleScore();
+        ScrabbleScore play = new ScrabbleScore(word);
+        Console.WriteLine(play.Score(word));
         return View["result.cshtml", play.Score(word)];
       };
     }
