@@ -34,9 +34,8 @@ namespace ScrabbleScoreNS
           }
         }
       }
-        Console.WriteLine(pointTotal);
+        // Console.WriteLine(pointTotal);
         return pointTotal;
     }
-
   }
 }
